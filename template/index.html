@@ -1,6 +1,7 @@
+<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
-    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,13 +39,18 @@
                     <a href="" class="button">En</a>
                 </div>
             </header>
-            <!-- {% for profile in profiles %} -->
-            <section class="wrapper">
-                        <small>Welcome</small>
-                        <h1>Mohammed Shiyas</h1>
-                        <a href="#" class="text">Software Engineer</a>
-            </section>
-            <!-- {% endfor %} -->
+            <!-- <section class="wrapper">
+                <small>Welcome</small>
+                <h1>Shiyas</h1>
+                <a href="#" class="text">Software Engineer</a>
+            </section> -->
+            {% for single in profile %}
+                <section class="wrapper">
+                    <small>Welcome</small>
+                    <h1>{{single.name}}</h1>
+                    <a href="#" class="text">{{single.designation}}</a>
+                </section>
+            {% endfor %}
         </section>
     </section>
     <section id="profile">
